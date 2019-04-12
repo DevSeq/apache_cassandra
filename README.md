@@ -6,6 +6,11 @@
 
 All examples are built using PostgreSQL for the relational content and Apache Cassandra 3.11.2 for the Apache Cassandra content.
 
+The following steps are to walk-through bringing up and destroying an environment using Docker containers and networking.
+
+**Up:**
+**Down:**
+
 ## Architecture
 
 Slide Deck:
