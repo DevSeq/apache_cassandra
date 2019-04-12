@@ -14,12 +14,13 @@ The following steps are to walk-through bringing up and destroying an environmen
 ## Architecture
 
 * [Slide Deck](https://docs.google.com/presentation/d/e/2PACX-1vR6lFDHJ5Nc6MWBR-MN_0CBK-40OTlMPZA_gztR_J2DAG8XbZeTl0Cn6kd02P3PxhQ6XM8dumWt2bK-/pub?start=false&loop=false&delayms=3000)
-* [Code]()
+* [Code](https://github.com/Adron/apache_cassandra/tree/master/core_architecture)
 
 ## Data Modeling
 
 * [Slide Deck](https://docs.google.com/presentation/d/e/2PACX-1vR6lFDHJ5Nc6MWBR-MN_0CBK-40OTlMPZA_gztR_J2DAG8XbZeTl0Cn6kd02P3PxhQ6XM8dumWt2bK-/pub?start=false&loop=false&delayms=3000)
-* [Code]()
+* [Code](https://github.com/Adron/apache_cassandra/tree/master/data_modeling)
 
+## Application Development
 
-
+TBD
