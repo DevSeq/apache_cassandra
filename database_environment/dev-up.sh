@@ -37,7 +37,7 @@ export PGDATABASE=postgres
 export PGUSER=postgres
 export PGPASSWORD=$PASSWORD
 
-echo "Setting up 'consist' database on Postgres."
+echo "Setting up database on Postgres."
 psql -U postgres -f postgres/inception.sql -h $IPPG
 
 docker ps
