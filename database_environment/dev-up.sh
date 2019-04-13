@@ -10,7 +10,7 @@ GATEWAY="172.21.0.1"
 NETWORKNAME="apache-cassandra-net"
 CASSANDRANODE="cassandra-node"
 POSTGRESQL="postie-db"
-PASSWORD="short_password_for_this_thing"
+PASSWORD="abc"
 
 echo "Creating Docker Network"
 docker network create --subnet="$SUBNET" --gateway="$GATEWAY" --attachable=true $NETWORKNAME

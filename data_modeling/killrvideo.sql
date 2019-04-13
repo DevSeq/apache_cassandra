@@ -1,8 +1,13 @@
 create schema if not exists killrvideo;
 
+create extension if not exists pgcrypto with schema killrvideo;
+
 create table if not exists killrvideo.users
 (
-    id uuid not null constraint user_pk primary key,
+    id uuid
+        default gen_random_uuid()
+        not null
+        constraint user_pk primary key,
     first         varchar default 100 not null,
     last          varchar default 100 not null,
     email varchar default 150 not null,
@@ -12,7 +17,9 @@ create table if not exists killrvideo.users
 
 create table if not exists killrvideo.videos
 (
-    id uuid not null constraint video_pk primary key,
+    id uuid
+        default gen_random_uuid()
+        not null video_pk primary key,
     userid uuid not null
         constraint videos_users_fk
         references killrvideo.users
@@ -26,7 +33,9 @@ create table if not exists killrvideo.videos
 
 create table if not exists killrvideo.video_event
 (
-    id uuid not null constraint video_event_pk primary key,
+    id uuid
+        default gen_random_uuid()
+        not null video_event_pk primary key,
     userid uuid not null
         constraint video_event_users_fk
         references killrvideo.users
@@ -42,7 +51,9 @@ create table if not exists killrvideo.video_event
 
 create table if not exists killrvideo.comments
 (
-    id uuid not null constraint comment_pk primary key,
+    id uuid
+        default gen_random_uuid()
+        not null comment_pk primary key,
     userid uuid not null
         constraint comments_users_fk
         references killrvideo.users
@@ -57,7 +68,9 @@ create table if not exists killrvideo.comments
 
 create table if not exists killrvideo.tags
 (
-    id uuid not null constraint tag_pk primary key ,
+    id uuid
+        default gen_random_uuid()
+        not null tag_pk primary key ,
     tag varchar default 255 not null
 );
 
@@ -81,12 +94,14 @@ create table if not exists killrvideo.preview_thumbnails
         on update cascade on delete set default ,
     position varchar default 20,
     url varchar default 255,
-    PRIMARY KEY(videoid, position)
+    primary key(videoid, position)
 );
 
 create table if not exists killrvideo.video_metadata
 (
-    id uuid not null constraint video_metadata_pk primary key,
+    id uuid
+        default gen_random_uuid()
+        not null  video_metadata_pk primary key,
     height float not null ,
     width float not null ,
     video_bit_rate varchar(20),
