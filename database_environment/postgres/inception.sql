@@ -1,3 +1,2 @@
-CREATE
-DATABASE aRelationalDatabase
+CREATE DATABASE aRelationalDatabase
     OWNER postgres
